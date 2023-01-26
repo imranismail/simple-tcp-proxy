@@ -1,0 +1,28 @@
+---
+apps:
+- name: single-target
+  ports:
+    - 5001
+    - 5200
+    - 5300
+    - 5400
+  targets:
+    - tcpbin.com:4242
+- name: multi-target
+  ports:
+    - 7001
+    - 7200
+    - 7300
+    - 7400
+  targets:
+    - tcpbin.com:4242
+    - 34.230.40.69:30000
+- name: multi-target-with-bad-target
+  ports:
+    - 6001
+    - 6200
+    - 6300
+    - 6400
+  targets:
+    - tcpbin.com:4242
+    - bad.target.for.testing:6003
